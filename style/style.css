@@ -80,6 +80,7 @@ li {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 i#rocket-icon {
