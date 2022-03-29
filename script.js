@@ -26,16 +26,17 @@ function showTask() {
 }
 
 function add() {
-    if (task.value != '') {
+    if (task.value) {
         arrayTasks.push({
             task: task.value,
             completed: false
         })
 
         showTask()
+        task.value = ''
 
     } else {
-        alert('Escreva a tarefa!')
+        alert('Escreva uma tarefa!')
     }
 
 }
@@ -54,9 +55,19 @@ function completeTask(index) {
 function reloadTasks() {
     let myTasks = localStorage.getItem('list')
     
-    arrayTasks = JSON.parse(myTasks)
+    if(myTasks) {
+        arrayTasks = JSON.parse(myTasks)
 
-    showTask()
+        showTask()
+    }
+    
 }
 
+function addEnter(teclas) {
+    if(teclas.key === 'Enter') {
+        add()
+    }
+}
+
+document.addEventListener('keypress', addEnter)
 button.addEventListener('click', add)
