@@ -8,7 +8,7 @@ reloadTasks()
 
 function showTask() {
     let newLi = ''
-    arrayTasks.forEach(function (task, index) {
+    arrayTasks.forEach((task, index) => {
 
         newLi += `
         <li class=" ${task.completed == true ? 'completed' : ''}">
@@ -32,9 +32,8 @@ function add() {
             completed: false
         })
 
-        
-
         showTask()
+
     } else {
         alert('Escreva a tarefa!')
     }
