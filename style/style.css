@@ -40,16 +40,15 @@ input {
 
 input#do {
     border: 2px solid #ededee;
-    width: 70%;
+    min-width: 65%;
 }
 
 input[type="submit"] {
     background-color: #8052EC;
     color: #fff;
-    width: 25%;
+    min-width: 20%;
     float: right;
     border: none;
-    margin-left: 20px;
     font-weight: bold;
     font-size: 15px;
 }
